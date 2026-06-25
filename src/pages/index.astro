@@ -1,78 +1,81 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
-
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-xl py-1">Hello there 👋</div>
+    <div class="text-5xl font-bold">I'm Sai Siri Reddy</div>
+    <div class="text-3xl py-3 font-bold text-primary">Computer Science Engineering Student & Full-Stack Developer</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        I specialize in building full-stack web applications, machine learning models, and scalable data analytics platforms[cite: 1]. With a strong foundation in core computer science, database management, and cloud workflows, I focus on solving real-world challenges through data-driven decisions and modern development practices[cite: 1].
       </text>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+    <div class="mt-8 flex gap-4">
+      <a class="btn btn-primary" href="mailto:saisirireddy27@gmail.com"> Let's Connect</a>
+      <a class="btn btn-outline" href="/cv"> View Full CV</a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">My Latest Projects {"</>"}</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="InsightFlow - User Behavior Analytics & Heatmap Platform"
+    img="/insightflow-thumbnail.jpg"
+    desc="A full-stack analytics infrastructure designed to track real-time user engagement including page views, clicks, and active sessions[cite: 1]. Features a high-performance interactive React dashboard equipped with session analytics and dynamic click heatmap rendering[cite: 1]."
+    url="https://github.com/sirireddyy"
+    badge="React • Flask • MongoDB"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="JobShield AI - Explainable Fake Job Detection & Recruitment Fraud Analysis"
+    img="/jobshield-thumbnail.jpg"
+    desc="An end-to-end AI platform created to flag fraudulent job postings using natural language processing and robust ML architectures[cite: 1]. Integrated Explainable AI (XAI) layers directly into a React and Flask interface to offer fully transparent fraud metrics and risk-scoring insights[cite: 1]."
+    url="https://github.com/sirireddyy"
+    badge="Python • Scikit-Learn • Flask • XAI"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Leaf Disease Detection using Lightweight ResNet"
+    img="/leaf-disease-thumbnail.jpg"
+    desc="A deep learning system utilizing optimized ResNet models paired with specialized visual attention mechanisms to classify crop illnesses[cite: 1]. Built using TensorFlow, Keras, and OpenCV to efficiently perform image preprocessing and feature extraction over expansive imaging datasets[cite: 1]."
+    url="https://github.com/sirireddyy"
+    badge="Deep Learning • Computer Vision • TensorFlow"
   />
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  <div class="mt-12">
+    <div class="text-3xl w-full font-bold mb-6">Technical Toolkit</div>
   </div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <h3 class="font-bold text-lg mb-2 text-secondary">Languages & Frameworks</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-neutral p-3">Java</span>
+        <span class="badge badge-neutral p-3">Python</span>
+        <span class="badge badge-neutral p-3">JavaScript</span>
+        <span class="badge badge-neutral p-3">SQL</span>
+        <span class="badge badge-neutral p-3">React.js</span>
+        <span class="badge badge-neutral p-3">Flask</span>
+        <span class="badge badge-neutral p-3">Node.js</span>
+        <span class="badge badge-neutral p-3">REST APIs</span>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-2 text-secondary">Data Science & Core Infrastructure</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-neutral p-3">Machine Learning</span>
+        <span class="badge badge-neutral p-3">Deep Learning (TensorFlow)</span>
+        <span class="badge badge-neutral p-3">NLP</span>
+        <span class="badge badge-neutral p-3">MongoDB & MySQL</span>
+        <span class="badge badge-neutral p-3">AWS (EC2, S3)</span>
+        <span class="badge badge-neutral p-3">Data Structures & Algorithms</span>
+        <span class="badge badge-neutral p-3">Computer Networks (CCNA)</span>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
