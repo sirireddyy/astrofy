@@ -1,92 +1,76 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TimeLineElement from "../components/cv/TimeLine.astro";
+import TimeLineElement from "../components/cv/TimeLineGrid.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
+<BaseLayout title="Resume | Sai Siri Reddy" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold">Resume</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Computer Science Engineering student with experience in full-stack development, machine learning, data analytics, and software engineering. Skilled in Python, Java, SQL, React, Flask, and database technologies, with a strong foundation in core computer science, systems design, and secure routing architectures.
   </div>
 
+  <!-- Education Section -->
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="B.Tech in Computer Science Engineering"
+      subtitle="2023 - 2027 at Malla Reddy Engineering College for Women, Hyderabad"
+    >
+      Current CGPA: 9.02/10
+    </TimeLineElement>
   </div>
 
+  <!-- Experience Section -->
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Data Science Intern"
+      subtitle="Remote | 2026 at KODBUD"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc mx-6 mb-4 grid gap-1">
+        <li>Processed and analyzed datasets containing 10,000+ records using Python frameworks including Pandas and NumPy[cite: 1].</li>
+        <li>Created 5+ customized data visualization reports to extract actionable insights and support strategic decision-making[cite: 1].</li>
+        <li>Built data-driven applications, machine learning workflows, and robust database systems using Python, Java, and SQL[cite: 1].</li>
+      </ul>
     </TimeLineElement>
   </div>
 
+  <!-- Certifications Section -->
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certifications</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
+    <li><strong>Cisco Networking Academy:</strong> Introduction to Networks (CCNA)[cite: 1]</li>
+    <li><strong>Cisco Networking Academy:</strong> Enterprise Networking, Security & Automation[cite: 1]</li>
+    <li><strong>Cisco Networking Academy:</strong> Networking Essentials & Cybersecurity Essentials[cite: 1]</li>
+    <li><strong>Cisco Networking Academy:</strong> Python Essentials 1 & Python Essentials 2[cite: 1]</li>
+    <li><strong>Cisco Packet Tracer Certification</strong>[cite: 1]</li>
+    <li><strong>IBM SkillsBuild:</strong> Artificial Intelligence Fundamentals[cite: 1]</li>
   </ul>
 
+  <!-- Skills Summary -->
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+    <div class="text-3xl w-full font-bold">Core Competencies</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <h4 class="font-bold text-md mb-1 text-secondary">Core Computer Science</h4>
+      <p class="text-sm mb-4">Data Structures & Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks ($TCP/IP$ Routing, VLANs, Subnetting, OSPF, BGP), Network Security Fundamentals[cite: 1]</p>
+    </div>
+    <div>
+      <h4 class="font-bold text-md mb-1 text-secondary">Data Science & Engineering</h4>
+      <p class="text-sm mb-4">Feature Engineering, Data Preprocessing, Text Vectorization (TF-IDF), Model Evaluation, Image Processing (OpenCV)[cite: 1]</p>
+    </div>
+  </div>
 </BaseLayout>
